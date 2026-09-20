@@ -1,6 +1,6 @@
 # Service Monitoring
 
-VB6 working copy of `Service Monitoring` from Dave Robinson's OneDrive Historical Dev `VB/Old` folder. Project title: Service Monitoring. Output: `Service Monitoring.exe`. `VersionCompanyName`: CSC. Contains 2 project files.
+VB6 Windows service monitor: `Service.dll` (`clsService`) queries/starts/stops services via SCM APIs; `Service Monitoring.exe` (V1) polls host/service rows and raises Monitoring.dll alerts when a service is down or missing. Open `Dll/Service.vbp` and `V1/Service Monitoring.vbp` in the VB6 IDE.
 
 **Source last updated:** 2026-08-27 · **Language:** VB6 · **Target:** VB6 Win32 · **Output:** ActiveX DLL, WinForms exe
 
@@ -10,24 +10,5 @@ _Note: original OneDrive LastWriteTime values were wiped to 2026-08-27 by a zip 
 
 | Project | Language | Type | Purpose |
 |---------|----------|------|---------|
-| `Project1` (`V1/Service Monitoring.vbp`) | VB6 | WinForms exe | Service Monitoring |
-| `Service` (`Dll/Service.vbp`) | VB6 | ActiveX DLL | Service |
-
-## How to open
-
-Open the `.vbp` in Visual Basic 6.0 IDE:
-- `V1/Service Monitoring.vbp`
-- `Dll/Service.vbp`
-
-## Requirements
-
-- Visual Basic 6.0 IDE
-
-## Attribution and provenance
-
-Working copy from Dave Robinson's OneDrive Historical Dev folder `VB/Old/Service Monitoring`.
-Company names in project files: CSC.
-
-## License
-
-MIT © 2026 VaderConsulting for Dave Robinson's code. See `LICENSE`.
+| `Service` (`Dll/Service.vbp`) | VB6 | ActiveX DLL | SCM query/start/stop helpers (`Service.dll`) |
+| `Project1` (`V1/Service Monitoring.vbp`) | VB6 | WinForms exe | Poll monitored services and alert on failure |
